@@ -18,6 +18,13 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+<style>
+    @media screen and (max-width:600px) {
+        .account{
+            display: none;
+        }
+    }
+</style>
 
 <body>
     <!-- Preloader -->
@@ -59,10 +66,22 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Login -->
+                               
+                                <div class="language-dropdown">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" style="color: #70c745;" aria-hidden="true"></i> <span class="account">Login / signup</span></button>
+                                   
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Sign up</a>
+                                            <a class="dropdown-item" href="#">Login</a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Login
                                 <div class="login">
                                     <a href="#"><i class="fa fa-user" aria-hidden="true"></i> <span>Login / signup</span></a>
-                                </div>
+                                </div> -->
                                 <!-- Cart -->
                                 <div class="cart">
                                     <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>
