@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Galaxy - Auction Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="toogle.css">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Poppins:wght@500;700;900&display=swap');
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+  }
+    .carousel img{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .carousel{
+      height: 100px;
+      background-color: black !important;
+      color: black !important;
+    }
+    .delivry{
+        display: flex;
+    }
+    #bt{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #21b259;
+    border: 1px solid #21b259;
+    color: #fff;
+    font-size: 20px;
+    }
+    .buton input{
+    width: 150px;
+    height: 50px;
+    border: 1px solid #21b259;
+    text-align: center;
+    }
+    #icon{
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+
+   }
+   #reload{
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+   }
+   /* .btn{
+    height: 50px;
+    width: 260px;
+   } */
+   .bank ul li{
+    list-style: none;
+   }
+   .bank ul{
+    display: flex;
+    align-items: center;
+   }
+   .share ul li{
+    list-style: none;
+   }
+   .share ul{
+    display: flex;
+    align-items: center;
+   }
+   .footer{
+    color: white;
+  }
+  .footer a{
+    color: white;
+  }
+  .footer a:hover{
+    color: #9edab5 !important;
+    transition: 0.2s ease-in-out;
+  }
+  .hide{
+    display: none;
+  }
+  .footer a:hover  .hide{
+    transition: 0.2s ease-in-out !important;
+    position: absolute;
+    padding-left: 110px;
+    display: block;
+    color: white;
+    
+  }
+ 
+  .asd{
+    text-decoration: none;
+  }
+</style>
+<body>
+  
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-6">
+               <img src="img/bg-img/7_8e7ba0be-1cf0-418a-a5c0-92afb303e6f4_700x700-removebg-preview.png" width="100%"  alt="">
+            </div>
+            <div class="col-md-6 mt-5">
+                <h1>Galaxy Shelf</h1>
+                <h5><del>   Base price:  $29.00</del></h5>
+                <h5 style="color: #9edab5;"><ins>Bid price:$19.00</ins></h5>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                <div class="delivry">
+                <h5>Delivered in :</h5>
+                <p style="font-weight: 300; font-size: large;">04 - 06 Working Days</p>
+            </div> 
+            <div class="buton">
+              <button id="bt">-</button>
+              <input type="number">
+              <button id="bt">+</button>
+              <button id="icon"><img id="imgg" height="45px" width="100%" src="image/heart-ruo.svg" alt=""></button>
+            </div>
+            <br>
+            <div class="addtocart">
+              <button style="height: 50px; width: 40%;" class="btn btn-outline-success">Add To Cart</button>
+              <button id="reload"><img height="50px" width="100%" src="image/icon 2.svg" alt=""></button>
+            </div>
+            <hr>
+            <!-- <h2>Installment Plans</h2>
+            <div class="bank">
+              <ul>
+                <li style="font-size: large;">Banks:</li>
+                <li><img height="30px" width="100%" style="padding-left: 10px;" src="https://interwood.pk/faysalbank-logo-eSQ.png" alt=""></li>
+                <li><img height="15px" width="100%" style="padding-left: 10px;" src="https://interwood.pk/silkbank-logo-5ro.png" alt=""></li>
+              </ul>
+            </div> -->
+            <!-- <div class="share">
+              <ul>
+                <li style="font-weight: 50;">Share:</li>
+                <li><img height="30px" width="30px" style="margin-left: 10px;" src="image/icons8-facebook-48.png" alt=""></li>
+                <li><img height="30px" width="30px" style="margin-left: 10px;" src="image/icons8-twitter-48.png" alt=""></li>
+                <li><img height="30px" width="30px" style="margin-left: 10px;" src="image/icons8-whatsapp-48.png" alt=""></li>
+              </ul>
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    
+   <script src="java.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
