@@ -28,7 +28,7 @@ if (isset($_POST["signup"])){
 
 
 
-    $signupquery = "INSERT INTO `users_pending`(`user_name`, `user_email`, `user_password`, `user_address`, `user_contactNo`, `user_zipCode`)
+    $signupquery = "INSERT INTO `users_approved`(`user_name`, `user_email`, `user_password`, `user_address`, `user_contactNo`, `user_zipCode`)
     VALUES ('$signupusername','$signupemail','$signuppassword','$signupaddress','$signupcontactnumber','$signupzipcode')";
     $signupdatasave = mysqli_query($connectiondb,$signupquery);
 
