@@ -178,12 +178,13 @@
 
   
   <div class="box">
+    <form action="signupaction.php" method="POST">
         <div class="form">
             <h2>Sign Up</h2>
             .<div class="container-fluid">
               <div class="row">
                 <div class="col-md-6"><div class="inputbox">
-                  <input type="text"  required="required" name="" id="username" onfocus="nnnn()">
+                  <input type="text"  required="required" name="signupusername" id="username" onfocus="nnnn()">
                   <span> <div class="inputbox">
                     <i></i>
                   </div></span>
@@ -191,7 +192,7 @@
                   <i></i>
               </div></div>
                 <div class="col-md-6">    <div class="inputbox">
-                <input type="email" required="required" name="" id="useremail" onfocus="nnnn()">
+                <input type="email" required="required" name="signupemail" id="useremail" onfocus="nnnn()">
                 <span>Email</span>
                 <i></i>
               </div>
@@ -205,14 +206,14 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="inputbox">
-                    <input type="password" required="required" name="" id="userpassword" onfocus="nnnn()">
+                    <input type="password" required="required" name="signuppassword" id="userpassword" onfocus="nnnn()">
                     <span>Passowrd</span>
                     <i></i>
                 </div>
                 </div>
                 <div class="col-md-6">
                   <div class="inputbox">
-                    <input type="password" required="required" name="" id="cpassword" onfocus="nnnn()">
+                    <input type="password" required="required" name="signupconpassword" id="cpassword" onfocus="nnnn()">
                     <span>Confirmed Password</span>
                     <i></i>
                     
@@ -229,13 +230,13 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-md-6">   <div class="inputbox">
-                  <input type="number" required="required" name="" id="cpassword" onfocus="nnnn()">
+                  <input type="number" required="required" name="signupcontactnumber" id="cpassword" onfocus="nnnn()">
                   <span>Contact Number</span>
                   <i></i>
                   
                 </div></div>
                 <div class="col-md-6">   <div class="inputbox">
-                  <input type="number" required="required" name="" id="cpassword" onfocus="nnnn()">
+                  <input type="number" required="required" name="signupzipcode" id="cpassword" onfocus="nnnn()">
                   <span>Zip COde</span>
                   <i></i>
                   
@@ -243,7 +244,7 @@
               </div>
             </div>
             <div class="inputbox">
-              <input type="text" required="required" name="" id="cpassword" onfocus="nnnn()">
+              <input type="text" required="required" name="signupaddress" id="cpassword" onfocus="nnnn()">
               <span>Address</span>
               <i></i>
               
@@ -253,12 +254,14 @@
             <span id="error3" style="color:red;  font-weight: bolder; "></span>
             <span id="error4" style="color:red;  font-weight: bolder; "></span>
             <div class="links">
-              <a href="">have an account</a> 
-              <a href="login.html">Login</a>
+              <a href="login.php">have an account</a> 
+              <a href="login.php">Login</a>
             </div>
-            <div class="button" onclick="sign()">Sign UP</div>
+            <button class="button" name="signup">Sign UP</button>
+            <!-- <div class="button"  onclick="sign()">Sign UP</div> -->
 
           </div>
+          </form>
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       </div>
