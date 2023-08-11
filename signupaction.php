@@ -11,24 +11,8 @@ if (isset($_POST["signup"])){
     $signupzipcode = $_POST["signupzipcode"];
     $signupaddress = $_POST["signupaddress"];
 
-    // echo $signupusername;
-    // echo '<br>';
-    // echo $signupemail;
-    // echo '<br>';
-    // echo $signuppassword;
-    // echo '<br>';
-    // echo $signupconpassword;
-    // echo '<br>';
-    // echo $signupcontactnumber;
-    // echo '<br>';
-    // echo $signupzipcode ;
-    // echo '<br>';
-    // echo $signupaddress;
-    // echo '<br>';
 
-
-
-    $signupquery = "INSERT INTO `users_approved`(`user_name`, `user_email`, `user_password`, `user_address`, `user_contactNo`, `user_zipCode`)
+    $signupquery = "INSERT INTO `users_pending`(`user_name`, `user_email`, `user_password`, `user_address`, `user_contactNo`, `user_zipCode`)
     VALUES ('$signupusername','$signupemail','$signuppassword','$signupaddress','$signupcontactnumber','$signupzipcode')";
     $signupdatasave = mysqli_query($connectiondb,$signupquery);
 

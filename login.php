@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Log In</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -57,7 +57,11 @@
 
 </style>
 <body>
-   
+<?php
+    if(isset($_GET["error"]) && $_GET["error"] === "InvalidCredentials"){
+        echo "<script>alert('Invalid Email or Password')</script>";
+    }
+    ?>
 <style>
     body{
         background-color: white;
@@ -213,44 +217,63 @@
   }
 }
 </style>
+
 <div class="container">
   <div class="row">
     <div class="col-md-6 loginpic"><img src="img/bg-img/undraw_mello_otq1.png" width="100%" alt=""></div>
     <div class="col-md-6 p-0">
 
       <div class="box">
-        <div class="form">
+        <form class="form" action="loginaction.php" method="post" onSubmit="return validate();">
             <h2>Login</h2>
            
             <div class="inputbox">
-                <input type="text" required="required" name="" id="useremail">
-                <span>Username</span>
+                <input type="text" required="required" name="name_email" id="inputnameemail">
+                <span>Username/Email</span>
                 <i></i>
             </div>
+        
             <div class="inputbox">
-                <input type="password" required="required" name="" id="userpassword">
+                <input type="password" required="required" name="password" id="userpassword">
                 <span>Passowrd</span>
                 <i></i>
             </div>
             
             <div class="links">
               <a href="">Don't have an account</a> 
-              <a href="Signup.html">Sign Up</a>
+              <a href="Signup.php">Sign Up</a>
             </div>
             <span id="error" style="color:red;  font-weight: bolder; "></span>
-            
-            <div class="button" onclick="login()">Login</div>
+           
+            <button type="submit" class="button" name="submit" onclick="login()">Login</button>
 
-        </div>
+        
+        </form>
+    
       </div>
     </div>
   </div>
 </div>
-    
+<script>
+        function validate() {
+    var $valid = true;
+    document.getElementById("inputnameemail").innerHTML = "";
+    document.getElementById("userpassword").innerHTML = "";
+
+    var userName = document.getElementById("inputnameemail").value;
+    var password = document.getElementById("userpassword").value;
+    if (userName == "") {
+        document.getElementById("user_info").innerHTML = "required";
+        $valid = false;
+    }
+    if (password == "") {
+        document.getElementById("userpassword").innerHTML = "required";
+        $valid = false;
+    }
+    return $valid;
+}
+</script>
      <script src="index.js"></script>
-
-      
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
     
 </body>

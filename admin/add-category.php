@@ -71,7 +71,7 @@
                         </div>
                         <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
                         <div class="drop-down   d-md-none">
-							<form action="#">
+							<form action="addcategoryaction.php" method="POST">
 								<input type="text" class="form-control" placeholder="Search">
 							</form>
                         </div>

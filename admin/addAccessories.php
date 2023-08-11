@@ -264,7 +264,7 @@
             <center><h1 class="mt-2">ADD ACCESSORIES</h1></center>
                             <div class="card-body">
                                 <div class="form-validation">
-                                    <form class="form-valide" action="addaccessoriesaction.php" method="POST">
+                                    <form class="form-valide" action="addaccessoriesaction.php" method="POST" enctype="multipart/form-data">
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-username">Accessory Name <span class="text-danger">*</span>
                                             </label>
