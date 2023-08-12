@@ -10,7 +10,18 @@ if (isset($_POST["addProduct"])){
     $productcategory = $_POST["productcategory"];
     $productdescription = $_POST["productdescription"];
     $productprice = $_POST["productprice"];
-    $productimage = $_POST["productimage"];
+    // $productimage = $_POST["productimage"];
+
+
+    $productimage = $_FILES["productimage"];
+    // echo $categoryname;
+    $productimagename= $productimage["name"];
+
+    $imagetemporarypath = $productimage["tmp_name"];
+
+    $mypatch = "productimages/".$productimagename;
+    
+    move_uploaded_file($imagetemporarypath,$mypatch);
 
 
     // echo $productname;
@@ -35,8 +46,8 @@ if (isset($_POST["addProduct"])){
 
 
 
-    $addproductquery = "INSERT INTO `plantsinfo`(`plantsid`, `plantname`, `species`,`quantity`, `price`, `description`,`categoryid`, `categoryname`, `quantity`) 
-    VALUES ('[value-1]','$productname ','$productspecies','$productquantity''$productprice','$productdescription','$productcategory','$categoryname','$productquantity')";
+    $addproductquery = "INSERT INTO `plantsinfo`(`plantsid`, `plantname`, `species`, `price`, `description`, `productimage`)
+     VALUES ('[value-1]','$productname','$productspecies','$productprice','$productdescription','$mypatch')";
     $addproductsave = mysqli_query($connectiondb,$addproductquery);
 
     if($addproductsave){

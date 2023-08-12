@@ -272,7 +272,7 @@ $getproducts= mysqli_query($connectiondb,$query);
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Pending Users</h4>
+                                <h4 class="card-title">PRODUCTS</h4>
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered zero-configuration">
                                         <thead>

@@ -272,26 +272,26 @@ $getcategoryname= mysqli_query($connectiondb,$query);
             <center><h1 class="mt-2">ADD PRODUCT</h1></center>
                             <div class="card-body">
                                 <div class="form-validation">
-                                    <form class="form-valide" action="addproductaction.php" method="POST">
+                                    <form class="form-valide" action="addproductaction.php" method="POST" enctype="multipart/form-data">
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-username">Product Name <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-username" name="productname" placeholder="Product Name">
+                                                <input type="text" class="form-control" id="val-username" name="productname" placeholder="Product Name" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-username">Product Species<span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-username" name="productspecies" placeholder="Product Species">
+                                                <input type="text" class="form-control" id="val-username" name="productspecies" placeholder="Product Species" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-number">Quantity <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="number" class="form-control" id="productquantity" name="productquantity" placeholder="Ex:3">
+                                                <input type="number" class="form-control" id="productquantity" name="productquantity" placeholder="Ex:3" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -315,21 +315,21 @@ $getcategoryname= mysqli_query($connectiondb,$query);
                                             <label class="col-lg-4 col-form-label" for="val-suggestions">Description <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input class="form-control" id="val-suggestions" name="productdescription" rows="5" placeholder="Product Description"></input>
+                                                <input class="form-control" id="val-suggestions" name="productdescription" rows="5" placeholder="Product Description" required></input>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-number">Price <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="number" class="form-control" id="productprice" name="productprice" placeholder="PKR200.00">
+                                                <input type="number" class="form-control" id="productprice" name="productprice" placeholder="PKR200.00" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-range">Image <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="file" class="form-control" id="val-range" name="productimage" placeholder="4">
+                                                <input type="file" class="form-control" id="val-range" name="productimage" placeholder="4" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">

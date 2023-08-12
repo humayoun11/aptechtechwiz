@@ -13,7 +13,7 @@ if (isset($_POST["addaccessories"])){
 
     $imagetemporarypath = $accessoryimage["tmp_name"];
 
-    $mypatch = "productimages/".$accessoryimagename;
+    $mypatch = "accesoryimages/".$accessoryimagename;
     
     move_uploaded_file($imagetemporarypath,$mypatch);
 

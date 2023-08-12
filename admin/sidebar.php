@@ -28,7 +28,7 @@
                             <i class="icon-envelope menu-icon"></i> <span class="nav-text">Manage Users</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./pending-users.php">Pending Users</a></li>
+                            <!-- <li><a href="./pending-users.php">Pending Users</a></li> -->
                             <li><a href="./approved-users.php">Approved Users</a></li>
                             <li><a href="./add-users.php">Add Users</a></li>
                             <!-- <li><a href="./email-compose.php">Compose</a></li> -->
@@ -53,6 +53,17 @@
                        
                             <li><a href="./displayAccesories.php">Display Accesories </a></li>
                             <li><a href="./addAccessories.php">Add Accessories</a></li>
+                            <!-- <li><a href="./email-compose.php">Compose</a></li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">purchase order</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <!-- <li><a href="./pending-users.php">Pending Users</a></li> -->
+                            <li><a href="./pending-orders.php">Pending Orders</a></li>
+                            <li><a href="./approved-orders.php">Approved Orders</a></li>
                             <!-- <li><a href="./email-compose.php">Compose</a></li> -->
                         </ul>
                     </li>

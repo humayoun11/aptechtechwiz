@@ -269,7 +269,7 @@
                                             <label class="col-lg-4 col-form-label" for="val-username">Accessory Name <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-username" name="accessoryname" placeholder="Enter a Accessory Name">
+                                                <input type="text" class="form-control" id="val-username" name="accessoryname" placeholder="Enter a Accessory Name" required>
                                             </div>
                                         </div>
                                         
@@ -277,21 +277,21 @@
                                             <label class="col-lg-4 col-form-label" for="val-password"> Accessory Quantity <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="number" class="form-control" id="val-password" name="accessoryquantity" placeholder="Quantity">
+                                                <input type="number" class="form-control" id="val-password" name="accessoryquantity" placeholder="Quantity" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-number"> Accessory Price <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="number" class="form-control" id="val-number" name="accessoryprice" placeholder="PKR 200">
+                                                <input type="number" class="form-control" id="val-number" name="accessoryprice" placeholder="PKR 200" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-range"> Accessory Image <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="file" class="form-control" id="val-range" name="accessoryimage" placeholder="4">
+                                                <input type="file" class="form-control" id="val-range" name="accessoryimage" placeholder="4" required>
                                             </div>
                                         </div>
                                         <!-- <div class="form-group row">

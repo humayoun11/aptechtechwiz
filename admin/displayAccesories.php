@@ -273,7 +273,7 @@ $getaccessories= mysqli_query($connectiondb,$query);
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Pending Users</h4>
+                                <h4 class="card-title">Display Accesories</h4>
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered zero-configuration">
                                         <thead>
@@ -293,7 +293,7 @@ $getaccessories= mysqli_query($connectiondb,$query);
       <td><?php echo $row['accessoryname'] ?></td>
       <td><?php echo $row['accessoryprice'] ?></td>
       <td><?php echo $row['accessoryquantity'] ?></td>
-      <td><?php echo $row['accessoriesimage'] ?></td>
+      <td><?php echo $row['accessoryiamge'] ?></td>
       <!-- <td><button class="btn btn-danger" name="deletproduct"><a href="deleteproductaction.php?acceptId=<?php echo $row["plantsid"]?> "class="text-light"> Delete </a></button></td> -->
       
       <!-- <td><button class="btn btn-primary" name="updateproduct"><a href="updateproductaction.php?acceptId=<?php echo $row["plantsid"]?> "class="text-light"> Update </a></button></td> -->

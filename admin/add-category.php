@@ -261,7 +261,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="card">
-            <center><h1 class="mt-2">ADD PRODUCT</h1></center>
+            <center><h1 class="mt-2">ADD CATEGORY</h1></center>
                             <div class="card-body">
                                 <div class="form-validation">
                                     <form class="form-valide" action="addcategoryaction.php" method="POST">
@@ -269,7 +269,7 @@
                                             <label class="col-lg-4 col-form-label" for="val-username">Category Name <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-username" name="categoryname" placeholder="Category Name">
+                                                <input type="text" class="form-control" id="val-username" name="categoryname" placeholder="Category Name" required>
                                             </div>
                                         </div>
                                        

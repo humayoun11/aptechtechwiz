@@ -268,42 +268,42 @@
                                             <label class="col-lg-4 col-form-label" for="val-username">Username <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-username" name="addusername" placeholder="Enter a username..">
+                                                <input type="text" class="form-control" id="val-username" name="addusername" placeholder="Enter a username.." required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-email">Email <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-email" name="adduseremail" placeholder="Your valid email..">
+                                                <input type="text" class="form-control" id="val-email" name="adduseremail" placeholder="Your valid email.." required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-password">Password <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="val-password" name="adduserpassword" placeholder="Your Password">
+                                                <input type="password" class="form-control" id="val-password" name="adduserpassword" placeholder="Your Password" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-number">Number <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-number" name="adduserphonenumber" placeholder="Phone #">
+                                                <input type="text" class="form-control" id="val-number" name="adduserphonenumber" placeholder="Phone #" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-digits">Zip Code <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="number" class="form-control" id="val-digits" name="adduserzipcode" placeholder="75000">
+                                                <input type="number" class="form-control" id="val-digits" name="adduserzipcode" placeholder="75000" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-digits">Address <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="val-digits" name="adduseraddress" placeholder="Address">
+                                                <input type="text" class="form-control" id="val-digits" name="adduseraddress" placeholder="Address" required>
                                             </div>
                                         </div>
                                         

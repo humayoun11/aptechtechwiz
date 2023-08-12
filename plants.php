@@ -158,10 +158,10 @@ include("header.php");
                   <a href="#"></a>
                 </div> -->
                 <div class="product-meta d-flex">
-                  <form action="wishlist.php" method="post"><a href="wishlist.php" class="wishlist-btn"
+                  <form action="" method="post"><a href="wishlist.php" class="wishlist-btn"
                     ><i class="icon_heart_alt"></i
-                  ></a></form>
-                  <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
+                  ></a>
+                  <a href="plants_details.php?plants=<?php echo $row["plantsid"];?>" class="add-to-cart-btn">Add to cart</a>
                   <a href="#" class="compare-btn"
                     ><i class="arrow_left-right_alt"></i
                   ></a>
