@@ -62,8 +62,6 @@
                     $dresult = mysqli_query($connectiondb,$dquery);     
                     $num_result = mysqli_num_rows($dresult);
                    
-                
-                   
                  if($num_result){
                     $row = mysqli_fetch_assoc($dresult);
                 ?>
@@ -110,7 +108,7 @@
 
                             <div class="cart--area d-flex flex-wrap align-items-center">
                                 <!-- Add to Cart Form -->
-                                <form class="cart clearfix d-flex align-items-center" action="addtocart.php" method="post">
+                                <form class="cart clearfix d-flex align-items-center" action="addtocartaction.php" method="post">
                                     <div class="quantity">
                                     <input type="hidden" name="plantsid" value="<?php echo $plantsid;?>" 
                                     
@@ -234,52 +232,40 @@
 
                                 <div class="submit_a_review_area mt-50">
                                     <h4>Submit A Review</h4>
-                                    <form action="#" method="post">
+                            <form action="reviewaction.php" method="post">
                                         <div class="row">
-                                            <div class="col-12">
-                                                <div class="form-group d-flex align-items-center">
-                                                    <span class="mr-15">Your Ratings:</span>
-                                                    <div class="stars">
-                                                        <input type="radio" name="star" class="star-1" id="star-1">
-                                                        <label class="star-1" for="star-1">1</label>
-                                                        <input type="radio" name="star" class="star-2" id="star-2">
-                                                        <label class="star-2" for="star-2">2</label>
-                                                        <input type="radio" name="star" class="star-3" id="star-3">
-                                                        <label class="star-3" for="star-3">3</label>
-                                                        <input type="radio" name="star" class="star-4" id="star-4">
-                                                        <label class="star-4" for="star-4">4</label>
-                                                        <input type="radio" name="star" class="star-5" id="star-5">
-                                                        <label class="star-5" for="star-5">5</label>
-                                                        <span></span>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                             <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                    <label for="name">Name</label>
+                                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nazrul">
+                                                </div>
                                                 <div class="form-group">
-                                                    <label for="name">Nickname</label>
-                                                    <input type="email" class="form-control" id="name" placeholder="Nazrul">
+                                                    <label for="email">Email</label>
+                                                    <input type="email" name="email" class="form-control" id="name" placeholder="Eg: abc@gmail.com" required>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6">
                                                 <div class="form-group">
                                                     <label for="options">Reason for your rating</label>
-                                                    <select class="form-control" id="options">
-                                                          <option>Quality</option>
-                                                          <option>Value</option>
-                                                          <option>Design</option>
-                                                          <option>Price</option>
-                                                          <option>Others</option>
+                                                    <select name="ratings" class="form-control" id="options">
+                                                    <option>Excellent</option>
+                                                          <option>Good</option>
+                                                          <option>Bad</option>
+                                                          <option>Average</option>
+                                                          <option>Below Average</option>
+                                                          
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-group">
                                                     <label for="comments">Comments</label>
-                                                    <textarea class="form-control" id="comments" rows="5" data-max-length="150"></textarea>
+                                                    <input type="text" name="comments" class="form-control"  id="comments" rows="5" data-max-length="150"></input>
                                                 </div>
                                             </div>
                                             <div class="col-12">
-                                                <button type="submit" class="btn alazea-btn">Submit Your Review</button>
+                                                <button name="reviewsubmit" type="submit" class="btn alazea-btn">Submit Your Review</button>
                                             </div>
                                         </div>
                                     </form>

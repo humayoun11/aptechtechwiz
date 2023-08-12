@@ -161,7 +161,7 @@ include("header.php");
                   <form action="wishlist.php" method="post"><a href="wishlist.php" class="wishlist-btn"
                     ><i class="icon_heart_alt"></i
                   ></a></form>
-                  <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
+                  <a href="plant_details.php" class="add-to-cart-btn">Add to cart</a>
                   <a href="#" class="compare-btn"
                     ><i class="arrow_left-right_alt"></i
                   ></a>

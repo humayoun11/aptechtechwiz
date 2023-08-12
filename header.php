@@ -104,8 +104,14 @@ include("connectdb.php");
                         <a class="dropdown-item" href="login.php">Login</a>
                         <?php } ?>
                       </div>
-                    </div>
+                      
+                      </div>
                   </div>
+                  <div class="cart">
+                                    <a href="cartview.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span class="cart-quantity">(1)</span></span></a>
+                                    <a href="wishlistview.php"><i class="fa fa-heart" aria-hidden="true"></i> <span>Wishlist <span class="cart-quantity">(1)</span></span></a>
+
+                                  </div>
                   <!-- Login
                                 <div class="login">
                                     <a href="#"><i class="fa fa-user" aria-hidden="true"></i> <span>Login / signup</span></a>
@@ -120,7 +126,7 @@ include("connectdb.php");
           </div>
         </div>
       </div>
-
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
       <!-- ***** Navbar Area ***** -->
       <div class="alazea-main-menu">
         <div class="classy-nav-container breakpoint-off">
@@ -128,9 +134,9 @@ include("connectdb.php");
             <!-- Menu -->
             <nav class="classy-navbar justify-content-between" id="alazeaNav">
               <!-- Nav Brand -->
-              <a href="index.php" class="nav-brand"
-                ><img src="img/core-img/logo.png" alt=""
-              /></a>
+              <a href="index.php" class="nav__logo">
+                    <i class="ri-leaf-line nav__logo-icon"></i> PlantNest
+                </a>
 
               <!-- Navbar Toggler -->
               <div class="classy-navbar-toggler">

@@ -11,7 +11,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+    <title>PlantNest</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico" />
@@ -665,7 +665,7 @@ include("header.php");
             >
               <!-- Product Image -->
               <div class="product-img">
-                <a href="shop-details.html"
+                <a href="plants_details.php"
                   ><img src="img/bg-img/9.jpg" alt=""
                 /></a>
                 <!-- Product Tag -->
@@ -738,7 +738,7 @@ include("header.php");
                   <a href="#" class="wishlist-btn"
                     ><i class="icon_heart_alt"></i
                   ></a>
-                  <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
+                  <a href="cartview.php" class="add-to-cart-btn">Add to cart</a>
                   <a href="#" class="compare-btn"
                     ><i class="arrow_left-right_alt"></i
                   ></a>
