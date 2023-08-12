@@ -2,8 +2,11 @@
 require 'connectdb.php';
 $query = 'select * from plantsinfo';
 $getproducts= mysqli_query($connectiondb,$query);
-
-?>
+// $categoryid = $getproducts['categoryid'];
+// if($getproducts){
+//     $categoryid = $getproducts['categoryid']
+// }
+    ?>
 
 
 <!DOCTYPE html>
@@ -280,22 +283,23 @@ $getproducts= mysqli_query($connectiondb,$query);
                                             <th>#</th>
                                                 <th>P Name</th>
                                                 <th>P Price</th>
-                                                <th>P Quantity</th>
+                                                <th>P image</th>
                                                 <th>P Description</th>
-                                                <th>P Image</th>
+                                                <th>P category</th>
                                                 <!-- <th>P Category</th> -->
                                                 <th>Delete</th>
                                                 <th>Update</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-    <?php while($row= mysqli_fetch_assoc($getproducts)){?>
+    <?php while($row= mysqli_fetch_assoc($getproducts)){;?> 
+         
       
     <tr>
       <th scope="row"><?php echo $row['plantsid'] ?></th>
       <td><?php echo $row['plantname'] ?></td>
       <td><?php echo $row['price'] ?></td>
-      <td><?php echo $row['quantity'] ?></td>
+      <td><?php echo $row['prdouctimage'] ?></td>
       <td><?php echo $row['description'] ?></td>
       <td><?php echo $row['categoryid'] ?></td>
       <!-- <td><?php echo $row['categoryname'] ?></td> -->

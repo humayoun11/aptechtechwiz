@@ -79,18 +79,22 @@ $productdata = mysqli_fetch_assoc($dlvry);
 <body>
   <div class="container">
     <h1>Product Update form</h1>
-    <form method="POST" action="producupdated.php">
+    <form method="POST" action="producupdated.php" enctype="multipart/form-data">
         <label for=""><?php echo $productdata["plantsid"]?> Plant Id</label>
         <br><label for=""> Plant Name</label>
       <input type="text" name="plantname" placeholder="Username" required value="<?php echo $productdata["plantname"]?>"><br><br>
       <br><label for=""> Plant Price</label>
       <input type="number" name="plantprice" placeholder="Email" required value="<?php echo $productdata["price"]?>"><br><br>
-      <br><label for=""> Plant Quantity</label>
-      <input type="tel" name="plantquantity" placeholder="Phone Number" required value="<?php echo $productdata["quantity"]?>"><br><br>
+      <!-- <br><label for=""> Plant Quantity</label> -->
+      <!-- <input type="tel" name="plantquantity" placeholder="Phone Number" required value="<?php echo $productdata["quantity"]?>"><br><br> -->
       <br><label for=""> Plant Description</label>
       <input type="text" name="plantdescription" placeholder="Password" required value="<?php echo $productdata["description"]?>"><br><br>
+      <br><label for=""> Plant Image</label>
+      <input type="file" name="plantimage" placeholder="text" required value="<?php echo $productdata["prdouctimage"]?>"><br><br>
+      
       <!-- <br><label for=""> Plant Category</label>
       <select name="category" required>
+        
       <?php
         $queryr= "select * from category";
         $categorydata = mysqli_query($connectiondb,$queryr);
