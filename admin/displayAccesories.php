@@ -1,3 +1,12 @@
+<?php
+require 'connectdb.php';
+$query = 'select * from accessories';
+$getaccessories= mysqli_query($connectiondb,$query);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -269,24 +278,31 @@
                                     <table class="table table-striped table-bordered zero-configuration">
                                         <thead>
                                             <tr>
-                                                <th>P Name</th>
-                                                <th>P Price</th>
-                                                <th>P Quantity</th>
-                                                <th>P Description</th>
-                                                <th>P Image</th>
-                                                <th>P Category</th>
+                                            <th> #</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                                <th>Quantity</th>
+                                                <th>Image</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Plants</td>
-                                                <td>$20.00</td>
-                                                <td>3</td>
-                                                <td>American Plant</td>
-                                                <td>Downloads Folder</td>
-                                                <td>Plants</td>
-                                            </tr>
-                                           
+    <?php while($row= mysqli_fetch_assoc($getaccessories)){?>
+      
+    <tr>
+      <th scope="row"><?php echo $row['accessoryid'] ?></th>
+      <td><?php echo $row['accessoryname'] ?></td>
+      <td><?php echo $row['accessoryprice'] ?></td>
+      <td><?php echo $row['accessoryquantity'] ?></td>
+      <td><?php echo $row['accessoriesimage'] ?></td>
+      <!-- <td><button class="btn btn-danger" name="deletproduct"><a href="deleteproductaction.php?acceptId=<?php echo $row["plantsid"]?> "class="text-light"> Delete </a></button></td> -->
+      
+      <!-- <td><button class="btn btn-primary" name="updateproduct"><a href="updateproductaction.php?acceptId=<?php echo $row["plantsid"]?> "class="text-light"> Update </a></button></td> -->
+      
+    </tr>
+  
+    <?php } ?>
+    <!--  -->
+  </tbody>
                                         </tfoot>
                                     </table>
                                 </div>

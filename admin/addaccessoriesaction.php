@@ -14,10 +14,12 @@ if (isset($_POST["addaccessories"])){
     $imagetemporarypath = $accessoryimage["tmp_name"];
 
     $mypatch = "productimages/".$accessoryimagename;
+    
     move_uploaded_file($imagetemporarypath,$mypatch);
 
-    $addaccessoriesquery = "INSERT INTO `accessories`(`accessoryname`, `accessoryquantity`, `accessoryprice` , `accessoriesimage`)
-     VALUES ('$accessoryname','$accessoryquantity ','$accessoryprice','$mypatch')";
+    
+  
+    $addaccessoriesquery = "INSERT INTO `accessories`(`accessoryname`, `accessoryquantity`, `accessoryprice`, `accessoriesimage`) VALUES ('$accessoryname','$accessoryquantity','$accessoryprice','$mypatch')";
     $addaccessoriessave = mysqli_query($connectiondb,$addaccessoriesquery);
 
     if($addaccessoriessave){

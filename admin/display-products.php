@@ -283,7 +283,7 @@ $getproducts= mysqli_query($connectiondb,$query);
                                                 <th>P Quantity</th>
                                                 <th>P Description</th>
                                                 <th>P Image</th>
-                                                <th>P Category</th>
+                                                <!-- <th>P Category</th> -->
                                                 <th>Delete</th>
                                                 <th>Update</th>
                                             </tr>
@@ -297,8 +297,8 @@ $getproducts= mysqli_query($connectiondb,$query);
       <td><?php echo $row['price'] ?></td>
       <td><?php echo $row['quantity'] ?></td>
       <td><?php echo $row['description'] ?></td>
-      <td><?php echo $row['categoryid '] ?></td>
-      <td><?php echo $row['categoryname'] ?></td>
+      <td><?php echo $row['categoryid'] ?></td>
+      <!-- <td><?php echo $row['categoryname'] ?></td> -->
       <td><button class="btn btn-danger" name="deletproduct"><a href="deleteproductaction.php?acceptId=<?php echo $row["plantsid"]?> "class="text-light"> Delete </a></button></td>
       
       <td><button class="btn btn-primary" name="updateproduct"><a href="updateproductaction.php?acceptId=<?php echo $row["plantsid"]?> "class="text-light"> Update </a></button></td>

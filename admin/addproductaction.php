@@ -35,8 +35,8 @@ if (isset($_POST["addProduct"])){
 
 
 
-    $addproductquery = "INSERT INTO `plantsinfo`(`plantsid`, `plantname`, `species`, `price`, `description`,`categoryid`, `categoryname`, `quantity`) 
-    VALUES ('[value-1]','$productname ','$productspecies','$productprice','$productdescription','$productcategory','$categoryname','$productquantity')";
+    $addproductquery = "INSERT INTO `plantsinfo`(`plantsid`, `plantname`, `species`,`quantity`, `price`, `description`,`categoryid`, `categoryname`, `quantity`) 
+    VALUES ('[value-1]','$productname ','$productspecies','$productquantity''$productprice','$productdescription','$productcategory','$categoryname','$productquantity')";
     $addproductsave = mysqli_query($connectiondb,$addproductquery);
 
     if($addproductsave){
