@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 include("connectdb.php");
 ?>
@@ -91,9 +92,7 @@ include("connectdb.php");
                         class="dropdown-menu"
                         aria-labelledby="dropdownMenuButton"
                       >
-                      <a class="dropdown-item" href="signup.php">Sign up</a>
-                        <a class="dropdown-item" href="login.php">Login</a>
-                      <!-- <?php
+                      <?php
                         if(isset($_SESSION["user_name"])){ ?>
                           <a class="dropdown-item" href="myaccount.php">My Account</a>
                           <a class="dropdown-item" href="logout.php">Logout</a>
@@ -103,7 +102,7 @@ include("connectdb.php");
 
                         <a class="dropdown-item" href="signup.php">Sign up</a>
                         <a class="dropdown-item" href="login.php">Login</a>
-                        <?php } ?> -->
+                        <?php } ?>
                       </div>
                     </div>
                   </div>

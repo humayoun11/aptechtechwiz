@@ -105,33 +105,50 @@ include("header.php");
   <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
         <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
-           <h2>Categories</h2>
+           <h2>Accessories</h2>
         </div>
       
 <div class="container">
     <div class="row">
+    <!-- Single Product Area -->
     <?php
-       
-
-    $sql2 = "SELECT * FROM `accessories`";
-    $result2 = mysqli_query($connectiondb, $sql2);
-    while ($row = mysqli_fetch_assoc($result2)) {
+       $sql2 = "SELECT * FROM `accessories`";
+       $result2 = mysqli_query($connectiondb, $sql2);
+       while ($row = mysqli_fetch_assoc($result2)) {
     ?>
-        <div class="col-md-3">
-        <div class="card mx-4 mt-5" style="width: 18rem">  
-      <img src="image/product3.png" class="card-img-top p-4" alt="plantimg" />
-      <div class="card-body">
-        <h5 class="card-title"><?php echo $row["accessoryname"];?></h5>
-       
-        <h5>Rs. <?php echo $row["accessoryprice"];?></h5>
-        <a href="javascript:void(0)" class="btn">Add to cart</a> 
-        <a href="javascript:void(0)" class="btn">Add to Wishlist</a>
-      </div>
-      
-    </div>
-     
-  </div>
-  <?php }  ?>
+         <div class="col-12 col-sm-6 col-lg-3">
+         <form action="" method="post">
+            <div
+              class="single-product-area mb-50 wow fadeInUp"
+              data-wow-delay="100ms">
+              <!-- Product Image -->
+              <div class="product-img">
+                <a href="plants_details.php"><img src="img/bg-img/9.jpg" alt="image"/></a>
+                <!-- Product Tag -->
+                <!-- <div class="product-tag">
+                  <a href="#"></a>
+                </div> -->
+                <div class="product-meta d-flex">
+                  <a href="#" class="wishlist-btn"
+                    ><i class="icon_heart_alt"></i
+                  ></a>
+                  <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
+                  <a href="#" class="compare-btn"
+                    ><i class="arrow_left-right_alt"></i
+                  ></a>
+                </div>
+              </div>
+              <!-- Product Info -->
+              <div class="product-info mt-15 text-center">
+                <a href="accessoriesDetails.php?accessory=<?php echo $row["accessoryid"];?>">
+                  <p><?php echo $row["accessoryname"];?></p>
+                </a>
+                <h6>Rs. <?php echo $row["accessoryprice"];?></h6>
+              </div>
+            </div>
+          </div>
+         </form>
+          <?php  } ?>
  </div>
 </div>
    

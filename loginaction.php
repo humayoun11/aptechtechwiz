@@ -17,7 +17,7 @@ if(isset($_POST["submit"])){
         $_SESSION["user_address"] = $row["user_address"];
         $_SESSION["user_contactNo"] = $row["user_contactNo"];
         $_SESSION["user_zipCode"] = $row["user_zipCode"];
-        header("location:index.php");
+        header("location:myaccount.php");
         exit;
 }
 else{

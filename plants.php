@@ -141,9 +141,9 @@ include("header.php");
         if (isset($_GET['category'])) {
     $categoryId = $_GET['category'];
 
-    $sql2 = "SELECT * FROM `plantsinfo` WHERE `categoryid` = '$categoryId'";
+    $sql2 = "SELECT * FROM `plantsinfo` WHERE `categoryid` = '$categoryId' ";
     $result2 = mysqli_query($connectiondb, $sql2);
-    while ($row = mysqli_fetch_assoc($result2)) {
+    while($row = mysqli_fetch_assoc($result2)) {
     ?>
          <div class="col-12 col-sm-6 col-lg-3">
          <form action="" method="post">
@@ -158,9 +158,9 @@ include("header.php");
                   <a href="#"></a>
                 </div> -->
                 <div class="product-meta d-flex">
-                  <a href="#" class="wishlist-btn"
+                  <form action="wishlist.php" method="post"><a href="wishlist.php" class="wishlist-btn"
                     ><i class="icon_heart_alt"></i
-                  ></a>
+                  ></a></form>
                   <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
                   <a href="#" class="compare-btn"
                     ><i class="arrow_left-right_alt"></i
@@ -169,10 +169,11 @@ include("header.php");
               </div>
               <!-- Product Info -->
               <div class="product-info mt-15 text-center">
-                <a href="plants_details.php?category=<?php echo $row["categoryid"];?>">
+                <a href="plants_details.php?plants=<?php echo $row["plantsid"];?>">
                   <p><?php echo $row["plantname"];?></p>
                 </a>
                 <h6>Rs. <?php echo $row["price"];?></h6>
+                <input type="hidden" name="category" value="<?php echo $categoryId;?>" />
               </div>
             </div>
           </div>
@@ -181,24 +182,6 @@ include("header.php");
   </div>
 </div>
 
-
-   
-
-   
-
-    
-
-    
-
-   
-
-    
-
-    
-
-    
-
-  
 
       <?php
 include("footer.php");

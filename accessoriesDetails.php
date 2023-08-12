@@ -56,14 +56,11 @@
                 <div class="row justify-content-between">
                 <?php
                 
-                if (isset($_GET['plants'])) {
-                    $plantsid = $_GET['plants'];
-                    $dquery = "SELECT * FROM `plantsinfo` INNER JOIN `category` ON plantsinfo.categoryid = category.categoryid WHERE `plantsid` = '$plantsid'";
+                if (isset($_GET['accessory'])) {
+                    $accessoryid = $_GET['accessory'];
+                    $dquery = "SELECT * FROM `accessories` WHERE `accessoryid` = '$accessoryid'";
                     $dresult = mysqli_query($connectiondb,$dquery);     
                     $num_result = mysqli_num_rows($dresult);
-                   
-                
-                   
                  if($num_result){
                     $row = mysqli_fetch_assoc($dresult);
                 ?>
@@ -101,10 +98,10 @@
 
                     <div class="col-12 col-md-6">
                         <div class="single_product_desc">
-                            <h4 class="title"><?php echo $row["plantname"];?></h4>
-                            <h4 class="price">Rs. <?php echo $row["price"];?></h4>
+                            <h4 class="title"><?php echo $row["accessoryname"];?></h4>
+                            <h4 class="price">Rs. <?php echo $row["accessoryquantity"];?></h4>
                             <div class="short_overview">
-                                <p><?php echo $row["species"];?></p>
+                                <p><?php echo $row["accessoryprice"];?></p>
                             </div>
                             
 
@@ -112,23 +109,23 @@
                                 <!-- Add to Cart Form -->
                                 <form class="cart clearfix d-flex align-items-center" action="addtocart.php" method="post">
                                     <div class="quantity">
-                                    <input type="hidden" name="plantsid" value="<?php echo $plantsid;?>" 
+                                    <input type="hidden" name="accessoryid" value="<?php echo $accessoryid;?>" 
                                     
                                         <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                        <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="plantquantity" value="1">
+                                        <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="accessoryquantity" value="1">
                                         <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                     </div>
                                     <button type="submit" name="addtocart" value="5" class="btn alazea-btn ml-15">Add to cart</button>
                                 </form>
                                 <!-- Wishlist & Compare -->
                                 <div class="wishlist-compare d-flex flex-wrap align-items-center">
-                                    <a href="wishlist.php?wishlist=<?php echo $row["plantsid"];?>" class="wishlist-btn ml-15"><i class="icon_heart_alt"></i></a>
+                                    <a href="wishlist2.php?wishlist2=<?php echo $row["accessoryid"];?>" class="wishlist-btn ml-15"><i class="icon_heart_alt"></i></a>
                                     <a href="#" class="compare-btn ml-15"><i class="arrow_left-right_alt"></i></a>
                                 </div>
                             </div>
 
                             <div class="products--meta">
-                                <p><span>Category:</span> <span><?php echo $row["categoryname"];?></span></p>
+                                <p><span>Category:</span> <span>use</span></p>
                                 <p><span>Tags:</span> <span>plants, green, cactus </span></p>
                                 <p>
                                     <span>Share on:</span>
