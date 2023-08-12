@@ -1,6 +1,7 @@
 <?php
 session_start();
 require("connectdb.php");
+require("authsession.php");
 if(isset($_GET["wishlist"]))
 {
     $plants = $_GET["wishlist"];

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
     <!-- Title -->
     <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
 
@@ -107,7 +105,7 @@
 
                             <div class="cart--area d-flex flex-wrap align-items-center">
                                 <!-- Add to Cart Form -->
-                                <form class="cart clearfix d-flex align-items-center" action="addtocart.php" method="post">
+                                <form class="cart clearfix d-flex align-items-center" action="addtocartaction2.php" method="post">
                                     <div class="quantity">
                                     <input type="hidden" name="accessoryid" value="<?php echo $accessoryid;?>" 
                                     
@@ -166,7 +164,7 @@
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade show active" id="description">
                                 <div class="description_area">
-                                    <p><?php echo $row["description"];?></p>
+                                    <p>Things to order with Plants</p>
                                 </div>
                             </div>
                             <?php  }} ?>

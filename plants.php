@@ -160,8 +160,13 @@ include("header.php");
                 <div class="product-meta d-flex">
                   <form action="" method="post"><a href="wishlist.php" class="wishlist-btn"
                     ><i class="icon_heart_alt"></i
+<<<<<<< HEAD
                   ></a>
                   <a href="plants_details.php?plants=<?php echo $row["plantsid"];?>" class="add-to-cart-btn">Add to cart</a>
+=======
+                  ></a></form>
+                  <a href="plant_details.php" class="add-to-cart-btn">Add to cart</a>
+>>>>>>> e746db8cd1a92bfe4fe6330127ce80919cd596a5
                   <a href="#" class="compare-btn"
                     ><i class="arrow_left-right_alt"></i
                   ></a>

@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+    <title>Plant Nest | Cart View</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -21,15 +21,16 @@
 
 <body>
 <?php
-include("header.php");
 
+include("header.php");
+require("authsession.php");
 ?>
 
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
         <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
-            <h2>WishList</h2>
+            <h2>Cart Details</h2>
         </div>
 
         <div class="container">
@@ -50,30 +51,27 @@ include("header.php");
     <?php
                             $user_id = $_SESSION["user_id"];
 
-$wishlist_query = "SELECT w.w2_id, a.accessoryname AS name, a.accessoryprice AS price, 'accessory' AS type FROM wishlist2 w INNER JOIN accessories a ON w.accessoryid = a.accessoryid WHERE w.user_id = '$user_id' UNION SELECT w.w_id, p.plantname AS name, p.price AS price, 'plant' AS type FROM wishlist w INNER JOIN plantsinfo p ON w.plantsid = p.plantsid WHERE w.user_id = '$user_id';";
-$wishlist_result = mysqli_query($connectiondb, $wishlist_query);
+$cart_query = "SELECT cart.cart_item_id , users_approved.user_name , plantsinfo.plantname , plantsinfo.species ,cart.plant_quantity ,plantsinfo.price from cart join users_approved
+on cart.user_id = users_approved.user_id join plantsinfo 
+on plantsinfo.plantsid = cart.plantsid 
+ WHERE cart.user_id = '$user_id';";
+$cart_result = mysqli_query($connectiondb, $cart_query);
 
-while ($row = mysqli_fetch_assoc($wishlist_result)) {
+while ($row = mysqli_fetch_assoc($cart_result)) {
 ?>
     <!-- ##### Cart Area Start ##### -->
     <div class="cart-area section-padding-0-100 clearfix">
         <div class="container">
+            
             <div class="row">
-                <div class="col-12">
+                <div class="col-8">
                     <div class="cart-table clearfix">
+                        
                         <table class="table table-responsive">
                             <thead>
                                 <tr>
            
-                                    <th><?php
-                                         if ($row['type'] === 'accessory') {
-        echo '<h6> Accessory</h6>';
-        
-    } else {
-        echo '<h6> Plant</h6>';
-       
-    }
-        ?></th>
+                                    <th>Product</th>
                                     <th>Product Name</th>
                                     <th>  Price</th>
                                     <th></th>
@@ -87,32 +85,28 @@ while ($row = mysqli_fetch_assoc($wishlist_result)) {
                                         <h5</h5>
                                     </td>
                                   
-                                    <td class="price"><span><?php echo $row["name"];?></span></td>
+                                    <td class="price"><span><?php echo $row["plantname"];?></span></td>
                                     <td class="total_price"><span>Rs. <?php echo $row["price"];?></span></td>
-                                    
-                                    
-                                    <?php if($row['type'] === 'accessory'){
-                                    ?>
-                                    <td class="action"><a href="accesoryDelete.php?remove_from_acc_wishlist=<?php echo $row['w2_id']; ?>"><i class="icon_close"></i>accss</a></td>
-                                }else{ <?php } else{?>
-                                    
-                                    <td class="action"><a href="wishlist_delete.php?remove_from_wishlist=<?php echo $row['w2_id']; ?>"><i class="icon_close"></i>plnts</a></td>
-                                    
-                                    
-                                <?php }?>
-                                
-                                
+                                    <td class="action"><a href="cart_delete.php?remove_from_acc_cart=<?php echo $row['cart_item_id']; ?>"><i class="icon_close"></i></a></td>
                                 </tr>
                             </tbody>
+                      
+                           </form>
                         </table>
                     </div>
                 </div>
+                <!-- <div class="col-md-12 mx-auto">
+    <form action="#"  method="post">
+                           <button class="btn btn-success" type="submit" name="checkout">Proceed to checkout</button> -->
+    </div>
             </div>
-
+    
 
         </div>
     </div>
     <?php } ?>
+    
+    
     <!-- ##### Cart Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->

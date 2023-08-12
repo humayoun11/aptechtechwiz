@@ -19,6 +19,9 @@ if(isset($_POST["submit"])){
         $_SESSION["user_zipCode"] = $row["user_zipCode"];
         header("location:myaccount.php");
         exit;
+    }
+else if($email=="admin@gmail.com" && $password=="admin123"){
+       header("location:admin/index.php");
 }
 else{
   header("location:login.php?error=InvalidCredentials");
